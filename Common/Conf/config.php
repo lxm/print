@@ -51,4 +51,7 @@ return array(
     'FILE_PRINT'=>3,
     'FILE_PRINTED'=>4,
     'FILE_PAID'=>5,
+
+    //最大尝试次数
+    'MAX_TRIES'=>10,
 );
