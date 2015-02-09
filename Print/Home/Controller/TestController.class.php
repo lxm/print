@@ -43,18 +43,6 @@ class TestController extends Controller
     
     public function getsplit()
     {
-    /*
-            $Data = M('Data'); // 实例化Data数据对象
-			$map['id']            = array('gt','1');
-            $count      = $Data->where($map)->count();// 查询满足要求的总记录数 $map表示查询条件
-            $Page       = new \Think\Page($count,5);// 实例化分页类 传入总记录数
-            $show       = $Page->show();// 分页显示输出
-            // 进行分页数据查询
-            $list = $Data->where($map)->order('create_time')->limit($Page->firstRow.','.$Page->listRows)->select();
-            $this->assign('list',$list);// 赋值数据集
-            $this->assign('page',$show);// 赋值分页输出
-            $this->display(); // 输出模板
-            */
             $condition['use_id']            = 1;
             $condition['status']            = array('between', '1,5');
             $File       = D('FileView');
@@ -68,15 +56,6 @@ class TestController extends Controller
 
     }
     
-    public function postsplit()
-    {
-        $Data = M('Data');
-        $data['title'] = 'vsdvkkmdvfsadfsadff';
-        $data['content'] = 'dsafdsffa';
-        $data['create_time'] = time();
-        $Data->add($data);
-    }
-    
     public function postupyun()
     {
         $setting=array ( 
@@ -87,11 +66,11 @@ class TestController extends Controller
                 'driverConfig' => array (
                         'host' => 'http://v0.api.upyun.com',
                         // 空间名称
-                        'bucket' => 'nkumstc',
+                        'bucket' => '',
                         // 操作员名称
-                        'username' => '605527108',
+                        'username' => '',
                         // 密码
-                        'password' => 'w1e9s9t3W1O0O1D3'
+                        'password' => ''
                         )
             );
         $Upload = new \Think\Upload($setting);
