@@ -55,4 +55,36 @@ return array(
 
     //最大尝试次数
     'MAX_TRIES'             =>10,
+    
+/*    
+    //配置
+        'UPLOAD_SITEIMG_UPYUN' => array ( 
+                'maxSize' => 10 * 1024 * 1024,//文件大小
+                'rootPath' => './',
+                'saveName' => array ('uniqid', ''),
+                'driver' => 'Upyun',
+                'driverConfig' => array (
+                        'host' => 'http://v0.api.upyun.com',
+                        // 空间名称
+                        'bucket' => 'nkumstc',
+                        // 操作员名称
+                        'username' => '605527108',
+                        // 密码
+                        'password' => 'w1e9s9t3W1O0O1D3'
+                        )
+            )
+
+*/
+    'UPLOAD_SITEIMG_QINIU' => array ( 
+                'maxSize' => 10 * 1024 * 1024,//文件大小
+                'rootPath' => './',
+                'saveName' => array ('uniqid', ''),
+                'driver' => 'Qiniu',
+                'driverConfig' => array (
+                        'secrectKey' => 'Tnpd01budFmsrY562mCeHyKJD5WAMltmPxsynAZg', 
+                        'accessKey' => 'fhGmHO1_QHq01QVKuAyKQoWklslb88Uxd0rJLcko',
+                        'domain' => 'nkumstc.qiniudn.com',
+                        'bucket' => 'nkumstc'
+                        )
+                )
 );
